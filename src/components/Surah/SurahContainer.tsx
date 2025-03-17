@@ -26,11 +26,11 @@ function SurahContainer () {
     fetchSurahs()
   }, []);
   if (isLoading) {
-    return <p>Loading...</p>;
+    return <p className="pt-5 font-semibold text-center text-light">Loading...</p>;
   }
 
   if (err) {
-    return <p>{err}</p>;
+    return <p className="p-5 text-center text-red-500">{err}</p>;
   }
 
   return <SurahList surahs={surahs} />;
